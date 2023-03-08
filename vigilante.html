@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatotio EdTech</title>
+    <link rel="shortcut icon" href="img/logo.lnk" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="./script/conexion.js"></script>
+    <script src="./script/firebase.js"></script>
+    <script src="./script/vistas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="estadoSolicitudes.html">Solicitudes</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Vigia</h1>
+            <h2>Revisa las solicitudes de vigilancia.</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+
+    <center>
+        <section class="col-md-6" id="formulario">
+            <h2>AGREGAR UN NUEVO TEMA</h2>
+
+            Nombre del tema*:<br>
+            <input class="form-control" type="text" id="nombreTema" placeholder="Ingrese el nombre del tema"
+                required><br>
+
+            <br>Descripción del tema*:<br>
+            <textarea class="form-control" id="descripcion" placeholder="Ingrese una descripción del tema"
+                required></textarea><br>
+            <hr>
+            <button class="btn btn-dark" onclick="anadirTema()">Agregar Tema</button>
+        </section>
+        <br>
+    </center>
+
+    <center>
+
+        <br>
+        <hr><br>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Reportes</h2>
+                <div id="reporte1" class="galeria-port">
+
+                </div>
+            </div>
+        </section>
+    </center>
+
+    <center>
+        <footer>
+            <div class="contenedor-footer" <div class="content-foo">
+                <h4>Location</h4>
+                <p>Medellín, Colombia </p>
+            </div>
+            </div>
+            <h2 class="titulo-final">&copf;Fundamentos | Observatorio EdTech</h2>
+        </footer>
+    </center>
+</body>
+
+<script src="./script/reporteVigilante.js"></script>
+
+</html>

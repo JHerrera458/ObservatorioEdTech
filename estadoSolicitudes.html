@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatotio EdTech</title>
+    <link rel="shortcut icon" href="img/logo.lnk" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="./script/conexion.js"></script>
+    <script src="./script/firebase.js"></script>
+    <script src="./script/vistas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="vigilante.html">Vigia</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Vigia</h1>
+            <h2>Solicitudes</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <center>
+        <div>
+            <select class="form-control" id="tema">
+                <option value="">Seleccione tema para filtrar</option>
+                <option value="todos">Todos los temas</option>
+            </select><br>
+
+            <button class="btn btn-dark" onclick="filtrarTema()">Buscar</button>
+        </div>
+    </center>
+
+    <center>
+        <br>
+        <div id="solicitudesEnEspera">
+            <h2>SOLICITUDES EN ESPERA</h2>
+        </div><br>
+    </center>
+
+    <center>
+        <br>
+        <div id="solicitudesAceptadas">
+            <h2>SOLICITUDES ACEPTADAS</h2>
+        </div>
+    </center>
+
+
+    <center>
+        <footer>
+            <div class="contenedor-footer" <div class="content-foo">
+                <h4>Location</h4>
+                <p>Medellín, Colombia </p>
+            </div>
+            </div>
+            <h2 class="titulo-final">&copf;Fundamentos | Observatorio EdTech</h2>
+        </footer>
+    </center>
+</body>
+
+<script src="./script/solicitudes.js"></script>
+<script src="./script/solicitudesAceptadas.js"></script>
+<script src="./script/mostrarTemas.js"></script>
+<script src="./script/mostrarSolicitudAceptada.js"></script>
+<script src="./script/reporteVigilante.js"></script>
+
+</html>
